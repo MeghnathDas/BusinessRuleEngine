@@ -29,6 +29,11 @@ namespace MD.BusinessRuleEngine.Processors.Extension.Tests
             var otherTypOfPhysicalProductPaymentProcessor = paymentData.GetProcessor();
             Assert.IsNotNull(otherTypOfPhysicalProductPaymentProcessor);
             Assert.IsInstanceOfType(otherTypOfPhysicalProductPaymentProcessor, typeof(IPhysicalProductPaymentProcessor));
+
+            paymentData.ForProductType = ProductType.NewSubscription;
+            var newMembershipPaymentProcessor = paymentData.GetProcessor();
+            Assert.IsNotNull(newMembershipPaymentProcessor);
+            Assert.IsInstanceOfType(newMembershipPaymentProcessor, typeof(IMembershipPaymentProcessor));
         }
     }
 }
