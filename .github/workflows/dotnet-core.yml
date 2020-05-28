@@ -1,4 +1,4 @@
-name: Business Rule Engine
+name: Build and Test
 
 on:
   push:
