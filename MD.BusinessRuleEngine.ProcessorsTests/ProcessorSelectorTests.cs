@@ -18,22 +18,24 @@ namespace MD.BusinessRuleEngine.Processors.Extension.Tests
                 Amount = 10,
                 CustomerName = "Test Customer 1",
                 Description = "Test Description 1",
-                ForProductType = ProductType.Book
+                ForProductType = ProductType.Others
             };
 
-            var bookProcessor = paymentData.GetProcessor();
-            Assert.IsNotNull(bookProcessor);
-            Assert.IsInstanceOfType(bookProcessor, typeof(IBookPaymentProcessor));
+            CheckProcessor<IPhysicalProductPaymentProcessor>(paymentData);
 
-            paymentData.ForProductType = ProductType.Others;
-            var otherTypOfPhysicalProductPaymentProcessor = paymentData.GetProcessor();
-            Assert.IsNotNull(otherTypOfPhysicalProductPaymentProcessor);
-            Assert.IsInstanceOfType(otherTypOfPhysicalProductPaymentProcessor, typeof(IPhysicalProductPaymentProcessor));
+            paymentData.ForProductType = ProductType.Book;
+            CheckProcessor<IBookPaymentProcessor>(paymentData);
 
             paymentData.ForProductType = ProductType.NewSubscription;
-            var newMembershipPaymentProcessor = paymentData.GetProcessor();
-            Assert.IsNotNull(newMembershipPaymentProcessor);
-            Assert.IsInstanceOfType(newMembershipPaymentProcessor, typeof(IMembershipPaymentProcessor));
+            CheckProcessor<IMembershipPaymentProcessor>(paymentData);
+
+            paymentData.ForProductType = ProductType.UpgradeSubscription;
+            CheckProcessor<IMembershipUpgradePaymentProcessor>(paymentData);
+        }
+        private void CheckProcessor<TProcessorType>(CustomerPayment paymentData) {
+            var processor = paymentData.GetProcessor();
+            Assert.IsNotNull(processor);
+            Assert.IsInstanceOfType(processor, typeof(TProcessorType));
         }
     }
 }

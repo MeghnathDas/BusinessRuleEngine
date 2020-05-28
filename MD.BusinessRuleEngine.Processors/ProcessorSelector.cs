@@ -13,7 +13,8 @@ namespace MD.BusinessRuleEngine.Processors.Extension
             _dicProcessors = new Dictionary<ProductType, Func<CustomerPayment, IProcessor>> {
                 { ProductType.Others, (x) => new PhysicalProductProcessor(x) },
                 { ProductType.Book, (x) => new BookPaymentProcessor(x) },
-                { ProductType.NewSubscription, (x) => new MembershipPaymentProcessor(x) }
+                { ProductType.NewSubscription, (x) => new MembershipPaymentProcessor(x) },
+                { ProductType.UpgradeSubscription, (x) => new MembershipUpgradePaymentProcessor(x) }
             };
         }
         public static IProcessor GetProcessor(this CustomerPayment customerPayment)

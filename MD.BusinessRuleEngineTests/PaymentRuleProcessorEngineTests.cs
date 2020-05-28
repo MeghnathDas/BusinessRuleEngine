@@ -28,14 +28,14 @@ namespace MD.BusinessRuleEngine.Tests
                     ForProductType = ProductType.NewSubscription,
                     Amount = 600,
                     Description = "Test new Membership 1"
+                },
+                new CustomerPayment
+                {
+                    CustomerName = "Test Customer3",
+                    ForProductType = ProductType.UpgradeSubscription,
+                    Amount = 1000,
+                    Description = "Test upgrade Membership"
                 }
-                //new CustomerPayment
-                //{
-                //    CustomerName = "Test Customer3",
-                //    ForProductType = ProductType.UpgradeSubscription,
-                //    Amount = 1000,
-                //    Description = "Test upgrade Membership"
-                //},
                 //new CustomerPayment
                 //{
                 //    CustomerName = "Test Customer4",
