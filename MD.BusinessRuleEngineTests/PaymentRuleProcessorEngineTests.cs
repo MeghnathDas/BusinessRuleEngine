@@ -28,21 +28,21 @@ namespace MD.BusinessRuleEngine.Tests
                     ForProductType = ProductType.NewSubscription,
                     Amount = 600,
                     Description = "Test new Membership 1"
-                },
-                new CustomerPayment
-                {
-                    CustomerName = "Test Customer3",
-                    ForProductType = ProductType.UpgradeSubscription,
-                    Amount = 1000,
-                    Description = "Test upgrade Membership"
-                },
-                new CustomerPayment
-                {
-                    CustomerName = "Test Customer4",
-                    ForProductType = ProductType.Video,
-                    Amount = 200,
-                    Description = "Learning to Ski"
                 }
+                //new CustomerPayment
+                //{
+                //    CustomerName = "Test Customer3",
+                //    ForProductType = ProductType.UpgradeSubscription,
+                //    Amount = 1000,
+                //    Description = "Test upgrade Membership"
+                //},
+                //new CustomerPayment
+                //{
+                //    CustomerName = "Test Customer4",
+                //    ForProductType = ProductType.Video,
+                //    Amount = 200,
+                //    Description = "Learning to Ski"
+                //}
             };
 
             var mock = new Mock<PaymentRuleProcessorEngine>();

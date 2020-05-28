@@ -2,8 +2,8 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
+using MD.BusinessRuleEngine.Processors.Extension;
 
 namespace MD.BusinessRuleEngine
 {
@@ -13,7 +13,11 @@ namespace MD.BusinessRuleEngine
 
         public Task GetTask()
         {
-            return null;
+            return Task.WhenAll(
+                GetPaymentData().Select(pmnt =>
+                    Task.Run(() => pmnt.GetProcessor().Execute())
+                    )
+                );
         }
     }
 }

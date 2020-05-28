@@ -6,6 +6,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\MD.BusinessRuleEngine.Models\MD.BusinessRuleEngine.Models.csproj" />
+    <ProjectReference Include="..\MD.BusinessRuleEngine.Processors\MD.BusinessRuleEngine.Processors.csproj" />
   </ItemGroup>
 
 </Project>
