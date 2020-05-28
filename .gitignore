@@ -8,5 +8,11 @@
 /MD.BusinessRuleEngine/obj
 /MD.BusinessRuleEngine/bin
 
-/MD.BusinessRuleEngine.Models/bin
 /MD.BusinessRuleEngine.Models/obj
+/MD.BusinessRuleEngine.Models/bin
+
+/MD.BusinessRuleEngine.TestHelpers/obj
+/MD.BusinessRuleEngine.TestHelpers/bin
+
+/MD.BusinessRuleEngineTests/obj
+/MD.BusinessRuleEngineTests/bin
