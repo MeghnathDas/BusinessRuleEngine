@@ -3,7 +3,10 @@
 ################################################################################
 
 /.vs
-
 /MD.BusinessRuleEngine/.vs
+
 /MD.BusinessRuleEngine/obj
 /MD.BusinessRuleEngine/bin
+
+/MD.BusinessRuleEngine.Models/bin
+/MD.BusinessRuleEngine.Models/obj

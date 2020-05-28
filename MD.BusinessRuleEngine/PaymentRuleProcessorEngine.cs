@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MD.BusinessRuleEngine.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,7 +9,7 @@ namespace MD.BusinessRuleEngine
 {
     public abstract class PaymentRuleProcessorEngine : IRuleEngine
     {
-        public abstract void GetPaymentData();
+        public abstract ICollection<CustomerPayment> GetPaymentData();
 
         public Task GetTask()
         {
