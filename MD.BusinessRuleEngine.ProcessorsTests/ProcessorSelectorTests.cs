@@ -21,8 +21,12 @@ namespace MD.BusinessRuleEngine.Processors.Extension.Tests
                 ForProductType = ProductType.Book
             };
 
-            var bookProcessor = paymentData.GetProcessor();
-            Assert.IsNotNull(bookProcessor);
+            //var bookProcessor = paymentData.GetProcessor();
+            //Assert.IsNotNull(bookProcessor);
+
+            paymentData.ForProductType = ProductType.Others;
+            var otherTypOfPhysicalProductPaymentProcessor = paymentData.GetProcessor();
+            Assert.IsInstanceOfType(otherTypOfPhysicalProductPaymentProcessor, typeof(IPhysicalProductPaymentProcessor));
         }
     }
 }
