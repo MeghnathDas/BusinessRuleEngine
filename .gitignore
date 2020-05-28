@@ -19,3 +19,6 @@
 
 /MD.BusinessRuleEngine.Processors/obj
 /MD.BusinessRuleEngine.Processors/bin
+
+/MD.BusinessRuleEngine.ProcessorsTests/obj
+/MD.BusinessRuleEngine.ProcessorsTests/bin

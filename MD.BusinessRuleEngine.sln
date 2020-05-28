@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MD.BusinessRuleEngine.TestH
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MD.BusinessRuleEngine.Processors", "MD.BusinessRuleEngine.Processors\MD.BusinessRuleEngine.Processors.csproj", "{8B971AC5-4A04-420C-A8DF-C1044DF4A2CE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MD.BusinessRuleEngine.ProcessorsTests", "MD.BusinessRuleEngine.ProcessorsTests\MD.BusinessRuleEngine.ProcessorsTests.csproj", "{8B11AC73-FEDA-48BA-B8AB-E3152B1EE8B8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -41,6 +43,10 @@ Global
 		{8B971AC5-4A04-420C-A8DF-C1044DF4A2CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8B971AC5-4A04-420C-A8DF-C1044DF4A2CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8B971AC5-4A04-420C-A8DF-C1044DF4A2CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8B11AC73-FEDA-48BA-B8AB-E3152B1EE8B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B11AC73-FEDA-48BA-B8AB-E3152B1EE8B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B11AC73-FEDA-48BA-B8AB-E3152B1EE8B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B11AC73-FEDA-48BA-B8AB-E3152B1EE8B8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -48,6 +54,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{B4B0B5B9-4E54-4EAE-ACEE-6065086FA33A} = {E3A59418-FF00-45B1-BA43-7E648929954B}
 		{CB8F4979-60EF-4DC0-8B36-0D1D8E0B934B} = {E3A59418-FF00-45B1-BA43-7E648929954B}
+		{8B11AC73-FEDA-48BA-B8AB-E3152B1EE8B8} = {E3A59418-FF00-45B1-BA43-7E648929954B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {471B28EC-3EFC-49B3-B6AB-AA9EA577FE9F}
