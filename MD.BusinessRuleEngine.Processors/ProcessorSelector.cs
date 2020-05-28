@@ -11,7 +11,8 @@ namespace MD.BusinessRuleEngine.Processors.Extension
         static ProcessorSelector()
         {
             _dicProcessors = new Dictionary<ProductType, Func<CustomerPayment, IProcessor>> {
-                { ProductType.Others, (x) => new PhysicalProductProcessor(x) }
+                { ProductType.Others, (x) => new PhysicalProductProcessor(x) },
+                { ProductType.Book, (x) => new BookPaymentProcessor(x) }
             };
         }
         public static IProcessor GetProcessor(this CustomerPayment customerPayment)
