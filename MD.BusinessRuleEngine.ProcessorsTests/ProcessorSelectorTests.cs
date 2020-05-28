@@ -31,6 +31,9 @@ namespace MD.BusinessRuleEngine.Processors.Extension.Tests
 
             paymentData.ForProductType = ProductType.UpgradeSubscription;
             CheckProcessor<IMembershipUpgradePaymentProcessor>(paymentData);
+
+            paymentData.ForProductType = ProductType.Video;
+            CheckProcessor<IVideoSalePaymentProcessor>(paymentData);
         }
         private void CheckProcessor<TProcessorType>(CustomerPayment paymentData) {
             var processor = paymentData.GetProcessor();

@@ -14,7 +14,8 @@ namespace MD.BusinessRuleEngine.Processors.Extension
                 { ProductType.Others, (x) => new PhysicalProductProcessor(x) },
                 { ProductType.Book, (x) => new BookPaymentProcessor(x) },
                 { ProductType.NewSubscription, (x) => new MembershipPaymentProcessor(x) },
-                { ProductType.UpgradeSubscription, (x) => new MembershipUpgradePaymentProcessor(x) }
+                { ProductType.UpgradeSubscription, (x) => new MembershipUpgradePaymentProcessor(x) },
+                { ProductType.Video, (x) => new VideoSalePaymentProcessor(x) }
             };
         }
         public static IProcessor GetProcessor(this CustomerPayment customerPayment)
